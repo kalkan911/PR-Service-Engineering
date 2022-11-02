@@ -10,10 +10,8 @@
 * `minikube dashboard`
 
 #### Show how to deploy something to the cluster:
-* Via CLI
-    * todo
 * Via Kubectl Yaml
-    * todo
+    * `kubectl apply -f nginx-deployment.yaml`
 * Via Helm Chart
   * https://artifacthub.io/packages/helm/prometheus-community/prometheus
     * `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts`
@@ -22,11 +20,13 @@
   * Forward Port to access application
     * `kubectl --namespace prometheus-namespace port-forward TODO-ADD-PROMETHEUS-SERVER-POD-NAME 9090`
 
+
 #### Show the Kubernetes REST API:
 
+
 * Run a kubectl proxy
-    * allows to circumvent authentication troubles
-    * `kubectl proxy --port=8080 &`
+  * allows to circumvent authentication troubles
+  * `kubectl proxy --port=8080 &`
 * Show the API methods
   * http://localhost:8080/api/v1/
 * List namespaces
