@@ -72,6 +72,8 @@ services:
       - KC_ENABLED=false
       - KC_AUTH_SERVER_URL=https://self.se.jku.at/auth
   kosmos-services:
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     image: registry.gitlab.com/jku-se/kosmos-quickstart/kosmos-services
     ports:
       - '7400:8080'
