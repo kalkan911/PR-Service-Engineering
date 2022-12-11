@@ -27,6 +27,7 @@
   * allows to circumvent authentication troubles
   * `kubectl proxy --port=8080 &`
   * `kubectl proxy --port=9999 --address="172.17.0.1" --disable-filter=true &`
+  * `kubectl proxy --port=9999 --address="127.0.0.1" --disable-filter=true &`
 * Show the API methods
   * http://localhost:8080/api/v1/
 * List namespaces
