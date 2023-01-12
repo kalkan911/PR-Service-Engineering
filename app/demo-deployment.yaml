@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: python-deployment
+  name: demo-deployment
   namespace: python
   labels:
-    app: python-app
+    app: demo-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: python-app
+      app: demo-app
   template:
     metadata:
       labels:
-        app: python-app
+        app: demo-app
     spec:
       containers:
-        - name: python
-          image: ringodev/crashing-image:latest
+        - name: demo-nginx-container
+          image: nginx:1.14.2
           ports:
             - containerPort: 80

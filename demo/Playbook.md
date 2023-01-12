@@ -43,3 +43,9 @@
 
 #### Drain a node and shut it down TODO
 * Does not work that well on Minikube
+
+
+
+* open a nodeport to prometheus
+* get prometheus pods
+* `kubectl port-forward prometheus-deployment-86d847fd74-ph5v6 8888:9090 -n monitoring --address="172.17.0.1" --address="127.0.0.1"`
